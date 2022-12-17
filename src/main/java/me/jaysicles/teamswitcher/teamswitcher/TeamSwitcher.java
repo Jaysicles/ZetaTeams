@@ -1,6 +1,9 @@
 package me.jaysicles.teamswitcher.teamswitcher;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import me.jaysicles.teamswitcher.teamswitcher.commands.TeamSwitchCommand;
+import me.jaysicles.teamswitcher.teamswitcher.utils.Placeholders;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,6 +28,12 @@ public final class TeamSwitcher extends JavaPlugin {
 
         // Create the messages class
         messages = new Messages(config);
+
+        // Checking/Registering for Placeholders
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
+            // this returns a boolean, true if your placeholder is successfully registered, false if it isn't
+            PlaceholderAPI.registerPlaceholderHook(this, new Placeholders(this));
+        }
 
     }
 

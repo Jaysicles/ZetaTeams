@@ -54,9 +54,15 @@
     </build>
 
     <repositories>
+        <!-- SPIGOT REPO -->
         <repository>
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <!-- PLACEHOLDER API REPO -->
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
         <repository>
             <id>sonatype</id>
@@ -65,10 +71,18 @@
     </repositories>
 
     <dependencies>
+        <!--- SPIGOT DEPENDENCY -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.19.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- PLACEHOLDER API DEPENDENCY -->
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
