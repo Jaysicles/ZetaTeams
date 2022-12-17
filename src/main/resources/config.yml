@@ -1,0 +1,23 @@
+# Configuration file for the Team Switch plugin
+# Version : 1.0-SNAPSHOT
+
+teams:
+  red:
+    perks:
+      - night_vision
+      - fire_resistance
+  blue:
+    perks:
+      - speed
+      - water_breathing
+
+players:
+  player1:
+    team: red
+  player2:
+    team: blue
+
+messages:
+  join_team_success: "&7You have joined the &f&l%team% &7team!"
+  join_team_usage: "&7Usage: /teamswitch <team>"
+  join_team_invalid: "&7Invalid team specified. Use '&cred&7' or '&9blue&7'."

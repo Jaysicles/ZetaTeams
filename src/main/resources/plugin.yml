@@ -1,0 +1,9 @@
+name: TeamSwitcher
+version: '${project.version}'
+main: me.jaysicles.teamswitcher.teamswitcher.TeamSwitcher
+api-version: 1.19
+authors: [ Jaysicles ]
+description: Switch teams for different perks
+commands:
+  teamswitch:
+    permission: zetateams.switch
